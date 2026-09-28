@@ -1,0 +1,178 @@
+{
+  "benchmark_date": "2026-09-24",
+  "new_paid_generations": 0,
+  "notes": [
+    "Frontends measured from video without stereo/mask caches; keyboard frontend reused afterwards for final fitting.",
+    "API models reused from the same original videos; no new submission using the new masks was tested.",
+    "Estimated uncached totals add historical API latency to measured frontend + fitting + export; they are not a newly observed end-to-end API run.",
+    "Dimension differences compare two estimates, NOT independent ground-truth measurement.",
+    "Blender rendering and batch ZIP time excluded from per-object estimates."
+  ],
+  "objects": [
+    {
+      "object": "box.mp4",
+      "old_frontend_recorded_stage_seconds": 177.61,
+      "fast_frontend_recorded_stage_seconds": 84.3,
+      "fast_frontend_stages": {
+        "prepare": {
+          "done": true,
+          "seconds": 21.2
+        },
+        "features": {
+          "done": true,
+          "seconds": 5.16
+        },
+        "matching": {
+          "done": true,
+          "seconds": 9.08
+        },
+        "camera_estimation": {
+          "done": true,
+          "seconds": 18.42
+        },
+        "metric_scale": {
+          "done": true,
+          "seconds": 2.09
+        },
+        "sparse_object_prompts": {
+          "done": true,
+          "seconds": 0.6
+        },
+        "sparse_photo_masks": {
+          "done": true,
+          "seconds": 27.75
+        },
+        "sparse_registration_reference": {
+          "done": true,
+          "seconds": 0.0
+        }
+      },
+      "new_metric_photo_seconds": 5.8580000000000005,
+      "export_seconds": 1.77,
+      "historical_api_seconds": 36.034,
+      "old_dimensions_mm": [
+        56.287125190675084,
+        58.51460266492644,
+        34.792727112284695
+      ],
+      "fast_dimensions_mm": [
+        56.48245181489622,
+        58.6690545357115,
+        34.540064321971
+      ],
+      "max_dimensions_change_mm": 0.25266279031369715,
+      "quality_status": "needs_review",
+      "estimated_uncached_total_seconds": 128.92
+    },
+    {
+      "object": "keyboard.mp4",
+      "old_frontend_recorded_stage_seconds": 196.04,
+      "fast_frontend_recorded_stage_seconds": 88.05,
+      "fast_frontend_stages": {
+        "prepare": {
+          "done": true,
+          "seconds": 21.66
+        },
+        "features": {
+          "done": true,
+          "seconds": 5.56
+        },
+        "matching": {
+          "done": true,
+          "seconds": 10.73
+        },
+        "camera_estimation": {
+          "done": true,
+          "seconds": 20.3
+        },
+        "metric_scale": {
+          "done": true,
+          "seconds": 2.12
+        },
+        "sparse_object_prompts": {
+          "done": true,
+          "seconds": 0.64
+        },
+        "sparse_photo_masks": {
+          "done": true,
+          "seconds": 27.04
+        },
+        "sparse_registration_reference": {
+          "done": true,
+          "seconds": 0.0
+        }
+      },
+      "new_metric_photo_seconds": 17.41,
+      "export_seconds": 10.89,
+      "historical_api_seconds": 25.751,
+      "old_dimensions_mm": [
+        376.92450878369755,
+        141.11402541997708,
+        40.36689536692853
+      ],
+      "fast_dimensions_mm": [
+        379.2743189917923,
+        141.8124330285501,
+        40.877666440290476
+      ],
+      "max_dimensions_change_mm": 2.3498102080947714,
+      "quality_status": "needs_review",
+      "estimated_uncached_total_seconds": 144.98
+    },
+    {
+      "object": "plant.mp4",
+      "old_frontend_recorded_stage_seconds": 200.35,
+      "fast_frontend_recorded_stage_seconds": 88.44,
+      "fast_frontend_stages": {
+        "prepare": {
+          "done": true,
+          "seconds": 20.15
+        },
+        "features": {
+          "done": true,
+          "seconds": 5.51
+        },
+        "matching": {
+          "done": true,
+          "seconds": 11.72
+        },
+        "camera_estimation": {
+          "done": true,
+          "seconds": 22.65
+        },
+        "metric_scale": {
+          "done": true,
+          "seconds": 2.14
+        },
+        "sparse_object_prompts": {
+          "done": true,
+          "seconds": 0.06
+        },
+        "sparse_photo_masks": {
+          "done": true,
+          "seconds": 26.21
+        },
+        "sparse_registration_reference": {
+          "done": true,
+          "seconds": 0.0
+        }
+      },
+      "new_metric_photo_seconds": 7.42,
+      "export_seconds": 2.37,
+      "historical_api_seconds": 25.398,
+      "old_dimensions_mm": [
+        178.24869707477453,
+        130.47660862259394,
+        62.650837617922036
+      ],
+      "fast_dimensions_mm": [
+        180.91163496959035,
+        132.38015645414697,
+        62.65300385510744
+      ],
+      "max_dimensions_change_mm": 2.662937894815809,
+      "quality_status": "retained_unvalidated",
+      "estimated_uncached_total_seconds": 124.88
+    }
+  ]
+}

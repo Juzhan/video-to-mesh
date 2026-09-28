@@ -1,0 +1,6 @@
+{
+  "objects": {
+    "bottle.mp4": {"backend": "meshy", "geometry": "outer_shape"},
+    "bowl.mp4": {"backend": "local", "geometry": "open_container"}
+  }
+}

@@ -1,0 +1,18 @@
+name: Bug report
+description: Report a failed capture or software problem
+title: "[Bug] "
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Expected behavior, actual behavior and command used.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Environment
+      description: OS, Python, GPU/driver, Blender and install method.
+  - type: textarea
+    attributes:
+      label: Logs and quality reports
+      description: Include the failing stage, run-report.json and relevant run.log excerpt. Remove API keys and personal paths. Share footage only if you have permission.

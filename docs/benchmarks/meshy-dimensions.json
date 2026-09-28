@@ -1,0 +1,129 @@
+{
+  "date": "2026-09-24",
+  "note": "Reuses paid generation. Same-video local dimensions are references, not independently measured physical truth. Times cover dimension fitting/checks only. Export simplification can change bounds slightly.",
+  "cases": [
+    {
+      "name": "bottle",
+      "accepted": true,
+      "method": "same_video_local_dimensions",
+      "reasons": [],
+      "local_dimensions_m": [
+        0.0688930704593658,
+        0.0679980652332306,
+        0.1902966918945312
+      ],
+      "axis_scales": [
+        0.9541266380816744,
+        0.9382751020752584,
+        1.0531247776144843
+      ],
+      "before_dimensions_m": [
+        0.0722053736995324,
+        0.07247135204039179,
+        0.1806971936654906
+      ],
+      "after_dimensions_m": [
+        0.0688930704593658,
+        0.0679980652332306,
+        0.19029669189453122
+      ],
+      "held_out_before": {
+        "mean_iou": 0.9468439645434358,
+        "p10_iou": 0.9323910666502561,
+        "edge": 0.006662527953142602,
+        "extent": 0.006082258761192032
+      },
+      "held_out_after": {
+        "mean_iou": 0.9581447597731307,
+        "p10_iou": 0.9491967661923235,
+        "edge": 0.005149014148414749,
+        "extent": 0.005880406262832459
+      },
+      "seconds": 3.25
+    },
+    {
+      "name": "box",
+      "accepted": false,
+      "method": "same_video_local_dimensions",
+      "reasons": [
+        "held_out_overlap_regressed",
+        "held_out_boundary_regressed",
+        "no_clear_held_out_improvement"
+      ],
+      "local_dimensions_m": [
+        0.0569999990463256,
+        0.0588979110717774,
+        0.0349413223266602
+      ],
+      "axis_scales": [
+        1.009162973893653,
+        1.003900804911158,
+        1.0116171759539534
+      ],
+      "before_dimensions_m": [
+        0.056482451814896195,
+        0.0586690545357115,
+        0.034540064321971
+      ],
+      "after_dimensions_m": [
+        0.056999999046325606,
+        0.05889791107177739,
+        0.0349413223266602
+      ],
+      "held_out_before": {
+        "mean_iou": 0.9583494110813999,
+        "p10_iou": 0.9442669436064142,
+        "edge": 0.00571823944420486,
+        "extent": 0.00850897783019231
+      },
+      "held_out_after": {
+        "mean_iou": 0.9561503867053024,
+        "p10_iou": 0.9457246376811594,
+        "edge": 0.006067869421290514,
+        "extent": 0.009773519246969517
+      },
+      "seconds": 2.75
+    },
+    {
+      "name": "keyboard",
+      "accepted": false,
+      "method": "same_video_local_dimensions",
+      "reasons": [
+        "no_clear_held_out_improvement"
+      ],
+      "local_dimensions_m": [
+        0.3789994647502898,
+        0.141,
+        0.0399983978271484
+      ],
+      "axis_scales": [
+        0.9992753154438896,
+        0.9942710733382131,
+        0.9784902444363738
+      ],
+      "before_dimensions_m": [
+        0.3792743189917924,
+        0.14181243302855012,
+        0.0408776664402905
+      ],
+      "after_dimensions_m": [
+        0.3789994647502898,
+        0.14099999999999993,
+        0.0399983978271484
+      ],
+      "held_out_before": {
+        "mean_iou": 0.9287930901218687,
+        "p10_iou": 0.9770998870495169,
+        "edge": 0.003979312801055586,
+        "extent": 0.006202210159482954
+      },
+      "held_out_after": {
+        "mean_iou": 0.9284304509390262,
+        "p10_iou": 0.9768437380250845,
+        "edge": 0.0040070419912678745,
+        "extent": 0.006100476533310889
+      },
+      "seconds": 13.71
+    }
+  ]
+}

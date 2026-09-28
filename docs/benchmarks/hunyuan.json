@@ -1,0 +1,201 @@
+{
+  "device": "RTX 5080 16 GB",
+  "scope": "shared measured frontend caches; no fresh video preprocessing; no paid API requests",
+  "cases": [
+    {
+      "case": "bottle",
+      "status": "retained_unvalidated",
+      "generation": {
+        "backend": "hunyuan3d-2mv-turbo",
+        "status": "generated_unscaled",
+        "gpu": "NVIDIA GeForce RTX 5080",
+        "torch": "2.8.0+cu128",
+        "seed": 12345,
+        "steps": 5,
+        "resolution": 384,
+        "units": "unknown_generated_scale",
+        "up_axis": "y",
+        "load_seconds": 9.657571335999819,
+        "generation_seconds": 2.6249677169980714,
+        "faces": 683188,
+        "watertight": false,
+        "closed_volume": false,
+        "peak_allocated_gib": 5.530662536621094,
+        "peak_reserved_gib": 6.17578125,
+        "total_seconds": 12.926013223001064
+      },
+      "elapsed_with_cached_frontend_seconds": 31.628367566001543,
+      "dimensions_mm": [
+        84.16557689827994,
+        83.65124123668302,
+        155.15601613594393
+      ],
+      "faces": 8000,
+      "closed_volume": false,
+      "median_iou": 0.8109278270462481,
+      "rejection_reasons": [
+        "not_closed_or_consistently_oriented",
+        "missing_visible_object_area",
+        "view_silhouette_disagreement"
+      ],
+      "dimension_error": "同视频本地尺寸与 Meshy 相差超过约 10%，保留原版并请人工核验",
+      "report": "outputs/hunyuan-bottle/report.json"
+    },
+    {
+      "case": "keyboard",
+      "status": "retained_unvalidated",
+      "generation": {
+        "backend": "hunyuan3d-2mv-turbo",
+        "status": "generated_unscaled",
+        "gpu": "NVIDIA GeForce RTX 5080",
+        "torch": "2.8.0+cu128",
+        "seed": 12345,
+        "steps": 5,
+        "resolution": 384,
+        "units": "unknown_generated_scale",
+        "up_axis": "y",
+        "load_seconds": 9.673296038999979,
+        "generation_seconds": 2.3922913579990563,
+        "faces": 369817,
+        "watertight": false,
+        "closed_volume": false,
+        "peak_allocated_gib": 5.508359909057617,
+        "peak_reserved_gib": 6.173828125,
+        "total_seconds": 12.40523612999823
+      },
+      "elapsed_with_cached_frontend_seconds": 36.17357260299832,
+      "dimensions_mm": [
+        375.59012102977846,
+        129.23538229007926,
+        64.18008308839075
+      ],
+      "faces": 15999,
+      "closed_volume": false,
+      "median_iou": 0.9432888901750806,
+      "rejection_reasons": [
+        "not_closed_or_consistently_oriented"
+      ],
+      "dimension_error": "同视频本地尺寸与 Meshy 相差超过约 10%，保留原版并请人工核验",
+      "report": "outputs/hunyuan-keyboard/report.json"
+    },
+    {
+      "case": "plane",
+      "status": "retained_unvalidated",
+      "generation": {
+        "backend": "hunyuan3d-2mv-turbo",
+        "status": "generated_unscaled",
+        "gpu": "NVIDIA GeForce RTX 5080",
+        "torch": "2.8.0+cu128",
+        "seed": 12345,
+        "steps": 5,
+        "resolution": 384,
+        "units": "unknown_generated_scale",
+        "up_axis": "y",
+        "load_seconds": 10.076792225001554,
+        "generation_seconds": 2.435710862999258,
+        "faces": 478144,
+        "watertight": false,
+        "closed_volume": false,
+        "peak_allocated_gib": 5.512796401977539,
+        "peak_reserved_gib": 6.421875,
+        "total_seconds": 12.960780367000552
+      },
+      "elapsed_with_cached_frontend_seconds": 28.64915416200165,
+      "dimensions_mm": [
+        176.47512500966823,
+        122.58794690597655,
+        63.202465535864036
+      ],
+      "faces": 8000,
+      "closed_volume": false,
+      "median_iou": 0.7778509479566069,
+      "rejection_reasons": [
+        "not_closed_or_consistently_oriented",
+        "missing_visible_object_area",
+        "view_silhouette_disagreement"
+      ],
+      "dimension_error": "同视频本地尺寸与 Meshy 相差超过约 10%，保留原版并请人工核验",
+      "report": "outputs/hunyuan-plane/report.json"
+    },
+    {
+      "case": "bottle-fp32",
+      "status": "retained_unvalidated",
+      "generation": {
+        "backend": "hunyuan3d-2mv-turbo",
+        "status": "generated_unscaled",
+        "gpu": "NVIDIA GeForce RTX 5080",
+        "torch": "2.8.0+cu128",
+        "seed": 12345,
+        "steps": 5,
+        "resolution": 384,
+        "vae_precision": "float32",
+        "units": "unknown_generated_scale",
+        "up_axis": "y",
+        "load_seconds": 10.69426900200051,
+        "generation_seconds": 3.4285898609996366,
+        "faces": 683192,
+        "watertight": false,
+        "closed_volume": false,
+        "peak_allocated_gib": 6.433165550231934,
+        "peak_reserved_gib": 7.025390625,
+        "total_seconds": 14.825191782998445
+      },
+      "elapsed_with_cached_frontend_seconds": 34.406365684000775,
+      "dimensions_mm": [
+        82.87477444579075,
+        84.54560464648229,
+        156.06738856263772
+      ],
+      "faces": 8000,
+      "closed_volume": false,
+      "median_iou": 0.8083078485555266,
+      "rejection_reasons": [
+        "not_closed_or_consistently_oriented",
+        "missing_visible_object_area",
+        "view_silhouette_disagreement"
+      ],
+      "dimension_error": "同视频本地尺寸与 Meshy 相差超过约 10%，保留原版并请人工核验",
+      "report": "outputs/hunyuan-bottle-fp32/report.json"
+    },
+    {
+      "case": "bottle-standard-dense",
+      "status": "retained_unvalidated",
+      "generation": {
+        "backend": "hunyuan3d-2mv-standard",
+        "status": "generated_unscaled",
+        "gpu": "NVIDIA GeForce RTX 5080",
+        "torch": "2.8.0+cu128",
+        "seed": 12345,
+        "steps": 50,
+        "resolution": 384,
+        "vae_precision": "fp16",
+        "units": "unknown_generated_scale",
+        "up_axis": "y",
+        "load_seconds": 9.35434170499866,
+        "generation_seconds": 53.112355229997775,
+        "faces": 697408,
+        "watertight": false,
+        "closed_volume": false,
+        "peak_allocated_gib": 5.5640411376953125,
+        "peak_reserved_gib": 6.677734375,
+        "total_seconds": 63.118566443998134
+      },
+      "elapsed_with_cached_frontend_seconds": 81.80167687300127,
+      "dimensions_mm": [
+        78.63484556379294,
+        96.42950899413047,
+        161.5193008511224
+      ],
+      "faces": 7999,
+      "closed_volume": false,
+      "median_iou": 0.7785353774080377,
+      "rejection_reasons": [
+        "not_closed_or_consistently_oriented",
+        "missing_visible_object_area",
+        "view_silhouette_disagreement"
+      ],
+      "dimension_error": "同视频本地尺寸与 Meshy 相差超过约 10%，保留原版并请人工核验",
+      "report": "outputs/hunyuan-bottle-standard-dense/report.json"
+    }
+  ]
+}

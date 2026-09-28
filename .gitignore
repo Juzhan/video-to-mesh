@@ -1,0 +1,57 @@
+# Local environments and build products
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+
+# Captures, reconstructions, downloaded code/weights and historical experiments
+/input/
+/inputs/
+/input-videos/
+/output/
+/output_*/
+/outputs/
+/*-models/
+/models/
+/vendor/
+/tmp/
+/local-history/
+/phone-workspace/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.obj
+*.glb
+*.ply
+*.blend
+*.blend1
+*.pt
+*.pth
+*.zip
+*.log
+*.db
+*.bin
+
+# Credentials and editor state
+.env
+.env.*
+!.env.example
+*api_key*
+*apikey*
+*.pem
+*.key
+.DS_Store
+.idea/
+.vscode/
+
+# Local experimental output; only the curated public mesh is exempt
+/om/
+!examples/mug/mug.obj

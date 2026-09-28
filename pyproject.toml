@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "packing-assets"
+version = "0.2.0"
+description = "Metric scale and batch asset preparation for packing simulation"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "opencv-contrib-python-headless>=4.10", "trimesh>=5.1", "requests>=2.32", "Pillow>=10"]
+
+[project.optional-dependencies]
+colmap = ["pycolmap>=4.2"]
+reconstruction = ["pycolmap-cuda12==4.2.0", "open3d-cpu>=0.19", "plyfile>=1.1", "rtree>=1.4", "mapbox-earcut>=2.0", "scikit-image>=0.25"]
+collision = ["coacd>=1.0.14", "open3d-cpu>=0.19", "shapely>=2.0", "mapbox-earcut>=2.0"]
+pybullet = ["pybullet==3.2.7", "coacd>=1.0.14", "open3d-cpu>=0.19", "shapely>=2.0", "mapbox-earcut>=2.0"]
+test = ["pytest>=8"]
+dev = ["pytest>=8", "ruff>=0.9"]
+pdf = ["reportlab>=4"]
+evaluation = ["manifold3d>=3.0", "open3d-cpu>=0.19", "rtree>=1.4"]
+
+[project.scripts]
+packing-assets = "packing_assets.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["packing_assets*"]
+
+[tool.setuptools.package-data]
+packing_assets = ["web/*.html", "web/*.css", "web/*.js"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

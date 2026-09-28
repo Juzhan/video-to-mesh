@@ -1,0 +1,89 @@
+{
+  "name": "mug",
+  "units": "m",
+  "up_axis": "Z",
+  "origin": "bottom_center",
+  "backend": "local",
+  "variant": "smoothed with cup geometry repair",
+  "dimensions_mm": [
+    116.176158,
+    85.307281,
+    105.633192
+  ],
+  "dimensions_are_estimated": true,
+  "faces": 8000,
+  "watertight": true,
+  "closed_volume": true,
+  "sha256": "6f991c3598288ef547abb7313a0c6a596f2c22ec344098cbf08aa5e7c03b4e4d",
+  "capture": {
+    "type": "real phone video excerpt",
+    "original_resolution": [
+      1920,
+      1080
+    ],
+    "original_duration_seconds": 47.114489,
+    "excerpt_start_seconds": 2,
+    "excerpt_duration_seconds": 32,
+    "playback_speed": 4,
+    "gif_resolution": [
+      420,
+      236
+    ],
+    "gif_frames": 48,
+    "audio": false
+  },
+  "cavity_check": {
+    "detected": true,
+    "opening_area_m2": 0.003933,
+    "depth_m": 0.09126277267932892,
+    "probe_m": [
+      -0.016088079099999965,
+      -0.000653640499999962,
+      0.06000180546033554
+    ],
+    "floor_z_m": 0.01437041912067108,
+    "probe_columns": [
+      {
+        "xy_m": [
+          -0.016088079099999965,
+          -0.000653640499999962
+        ],
+        "floor_z_m": 0.01437041912067108,
+        "rim_z_m": 0.1056331918
+      },
+      {
+        "xy_m": [
+          -0.0010880790999999515,
+          -0.000653640499999962
+        ],
+        "floor_z_m": 0.01436494294393234,
+        "rim_z_m": 0.1056331918
+      },
+      {
+        "xy_m": [
+          -0.031088079099999978,
+          -0.000653640499999962
+        ],
+        "floor_z_m": 0.0143669769524353,
+        "rim_z_m": 0.1056331918
+      },
+      {
+        "xy_m": [
+          -0.016088079099999965,
+          0.014346359500000051
+        ],
+        "floor_z_m": 0.014384411311032103,
+        "rim_z_m": 0.1056331918
+      },
+      {
+        "xy_m": [
+          -0.016088079099999965,
+          -0.012653640499999973
+        ],
+        "floor_z_m": 0.013921037351967619,
+        "rim_z_m": 0.1056331918
+      }
+    ],
+    "method": "downward rays through a region enclosed by measured rim geometry"
+  }
+}

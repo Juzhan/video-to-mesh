@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#146a57"><title>物体采集 · 视频转模型</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head>
+<body>
+<header><a class="brand" href="/">▧ <span>物体采集</span></a><span id="connection" class="pill">局域网直传</span></header>
+<main>
+<section class="intro"><div class="eyebrow">PHONE → COMPUTER → 3D</div><h1>拍一件，传一件。</h1><p>手机视频直接送到电脑，自动排队生成模型。<br>上传下一件时，电脑可以继续处理上一件。</p></section>
+<section id="pair" class="card"><h2>连接电脑</h2><p class="muted">手机连上电脑热点或同一个 Wi-Fi，输入电脑显示的配对码。</p><form id="pair-form"><label for="code">配对码</label><div class="inline"><input id="code" inputmode="numeric" autocomplete="off" placeholder="8 位数字" maxlength="8" required><button type="submit">连接</button></div></form><p id="pair-error" class="error" role="alert"></p></section>
+<div id="workspace" hidden>
+<section class="card"><div class="section-top"><h2>发送一个物体</h2><span class="muted">01 / 采集</span></div>
+<div class="capture-actions"><label class="capture-button" for="camera">◉ 直接拍摄<input id="camera" type="file" accept="video/*" capture="environment"></label><label class="capture-button secondary" for="library">＋ 选择已有视频<input id="library" type="file" accept="video/*,.mov,.mp4,.m4v,.mkv,.avi,.webm"></label></div>
+<p class="hint">建议先把手机相机设为 1080p / 30 fps。物体和 A4 参照板保持不动，手机绕物体拍摄。若浏览器不能直接拍摄，可先录好再选择视频。</p>
+<div id="file-info" class="file-info" hidden></div><video id="video-preview" controls playsinline preload="metadata" hidden></video>
+<form id="upload-form">
+<label for="name">物体名称 <span class="muted">也是最终模型名称</span></label><input id="name" required maxlength="80" placeholder="例如：键盘、蓝色杯子、飞机">
+<div class="options"><div><label for="backend">生成方式</label><select id="backend"><option value="meshy">Meshy · 本地尺寸混合（推荐）</option><option value="meshy-fast">Meshy · 快速照片校正</option><option value="local">本地重建</option></select></div><label class="check"><input id="blender" type="checkbox">附带 Blender 展示</label></div>
+<p id="cost-note" class="hint">一次上传，本地测量尺寸、Meshy 生成外形。仅 Meshy 生成消耗 API 积分；默认不生成 smooth 版本。</p>
+<button id="send" class="wide" type="submit" disabled>上传并自动生成</button></form>
+<div id="transfer" hidden><div class="transfer-top"><strong id="transfer-title">正在上传</strong><span id="percent">0%</span></div><progress id="upload-progress" max="100" value="0"></progress><p id="speed" class="muted"></p><button id="pause" class="text-button" type="button">暂停上传</button></div>
+<p id="upload-message" aria-live="polite"></p>
+<p class="hint">上传时请保持本页在前台、屏幕亮起。断线或暂停后，重新选择同一视频可以续传；电脑确认接收后即可关闭网页。</p>
+</section>
+<section class="card"><div class="section-top"><h2>电脑处理队列</h2><button id="refresh" class="text-button" type="button">刷新</button></div><p class="muted">电脑逐件生成，不需要等待全部视频上传完。完成后可直接下载 OBJ 或整包。</p><div id="jobs" aria-live="polite"><p class="empty">还没有上传视频</p></div></section>
+</div>
+<footer>视频只传到这台电脑。选择 Meshy 时，电脑会发送选出的物体图片用于生成。</footer>
+</main></body></html>

@@ -1,0 +1,76 @@
+{
+  "case": "synthetic_pump_bottle",
+  "date": "2026-09-24",
+  "true_dimensions_mm": [
+    93,
+    56,
+    222
+  ],
+  "generation": {
+    "model": "meshy-7.1",
+    "geometry_resolution": "standard",
+    "images": 4,
+    "texture": false,
+    "elapsed_seconds": 25.95,
+    "observed_credits": 20,
+    "cached_local_metric_frontend": true,
+    "not_end_to_end_timing": true
+  },
+  "truth_use": "evaluation only; no truth scale or rotation fitting; not supplied to Meshy or local reconstruction",
+  "metrics": [
+    {
+      "model": "local_standard",
+      "faces": 8000,
+      "p95_mm": 0.9321692641683232,
+      "iou": 0.9766656535980819,
+      "dimension_error_mm": [
+        0.1327100000000081,
+        0.7462500000000039,
+        0.8372399999999891
+      ],
+      "gate": "passed"
+    },
+    {
+      "model": "local_standard_smooth",
+      "faces": 8000,
+      "p95_mm": 0.86442046907939,
+      "iou": 0.9812846437090126,
+      "dimension_error_mm": [
+        0.19357935235120305,
+        0.3474548075418013,
+        1.1594349999345943
+      ],
+      "gate": "passed"
+    },
+    {
+      "model": "meshy",
+      "faces": 8000,
+      "p95_mm": 1.6884570442242695,
+      "iou": 0.9475373855502596,
+      "dimension_error_mm": [
+        2.4098599999999997,
+        0.0990500000000033,
+        1.299240000000007
+      ],
+      "gate": "passed"
+    },
+    {
+      "model": "meshy_smooth",
+      "faces": 8000,
+      "p95_mm": 1.7276553846371603,
+      "iou": 0.9461185522630426,
+      "dimension_error_mm": [
+        2.5641974901930986,
+        0.16876075791999456,
+        1.5877878365828935
+      ],
+      "gate": "passed"
+    }
+  ],
+  "limitations": [
+    "single synthetic case; not real-world certification",
+    "Meshy adds false shoulder detail",
+    "local standard reconstruction is more accurate in this case",
+    "no Meshy cavity or physics validation"
+  ]
+}

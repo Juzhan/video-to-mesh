@@ -1,0 +1,8 @@
+{
+  "default_mass_kg": 0.1,
+  "threshold_mm": 3.0,
+  "objects": {
+    "bowl.mp4": {"geometry": "open_container", "mass_kg": 0.25},
+    "keyboard.mp4": {"geometry": "outer_shape", "mass_kg": 0.7}
+  }
+}
