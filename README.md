@@ -1,4 +1,4 @@
-# packing-assets
+# video-to-mesh GPT弄的
 
 **手机视频 → 同尺度、低面数 OBJ / PyBullet 仿真资产。**
 
